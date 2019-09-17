@@ -1,6 +1,7 @@
 package 데이터정렬ex게식판;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class ArraysMain3 {
@@ -36,7 +37,7 @@ public class ArraysMain3 {
 			int menu = sc.nextInt();
 			
 			if(menu == 1) {
-				Arrays.sort(ar,new Comparator<FoleName>() {
+				Arrays.sort(ar,new Comparator<FileName>() {
 					@Override
 					public int compare(FileName o1, FileName o2) {
 						//o1과 o2의 name을 비교
@@ -44,10 +45,14 @@ public class ArraysMain3 {
 					}
 				});
 			}else if(menu == 2) {
-				Arrays.sort(ar,new Comparator<Filenmae>(){
-				return o1.getSize() - o2.getSize();
-				}
-			});
+				Arrays.sort(ar, new Comparator<FileName>() {
+
+					@Override
+					public int compare(FileName o1, FileName o2) {
+						return o1.getSize() - o2.getSize();
+					}
+					
+				});
 			}else {
 				System.out.printf("메뉴는 1번과 2번만 선택하여야 합니다.\n");
 				//프로그램종료
@@ -70,11 +75,10 @@ public class ArraysMain3 {
 			
 			
 			
-			//af	
+			//ar 배열의 내용을 출력
 			
-			for(FileName Temp : ar)
-				for(FileName Ttemp : ar) {
-					Systme.out.printf(%s=n%|, temp)
+			for(FileName Temp : ar) {
+					System.out.printf("%s\n", Temp);
 				}
 			
 			

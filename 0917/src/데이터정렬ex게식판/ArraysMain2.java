@@ -10,7 +10,6 @@ public class ArraysMain2 {
 		f1.setName("자바");
 		f1.setSize(80);
 		f1.setType("파워포인트");
-		f1.setsave(true);
 
 		FileName f2 = new FileName();
 		f2.setName("스위프트");
