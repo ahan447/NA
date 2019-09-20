@@ -12,8 +12,12 @@ public class SwitchFrame extends Frame {
 	Button page1, page2;
 	//화면으로 사용할 패널 2개
 	Panel p1,p2;
+	//Frame의 변수를 생성
+	Frame parent;
 	
 	public SwitchFrame() {
+		//this 를 parent 에 대입.
+		parent = this;
 		//위에 버튼을 배치
 		Panel buttonPanel = new Panel();
 		page1 = new Button("1페이지");
@@ -54,7 +58,19 @@ public class SwitchFrame extends Frame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.printf("버튼 1 클릭");
+				//버튼을 사라지게 하기
+				//page1.setVisible(false);
 				
+				//PC용에서는 버튼을 무효화하는 방법을 많이 사용하고
+				//스마트폰에서는 버튼을 안보이게 하는 방법을 많이 사용
+				
+				
+				
+				//버튼을 반투명하게 하기 (무효화)
+				page1.setEnabled(false);
+				page2.setEnabled(true);
+				//p1.setVisible(false);
+				parent.add(p2);
 			}
 		});
 		
@@ -63,6 +79,10 @@ public class SwitchFrame extends Frame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.printf("버튼 2 클릭");
+				
+				page1.setEnabled(true);
+				page2.setEnabled(false);
+				
 			}
 			
 		});
