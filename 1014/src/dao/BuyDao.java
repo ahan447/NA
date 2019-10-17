@@ -90,7 +90,40 @@ public class BuyDao {
 	}
 	
 
-	
+	//데이터를 수정하는 메소드
+		public int updateBuy(Buy buy) {
+			int result = -1;
+			try {
+				con = DriverManager.getConnection(
+					"jdbc:oracle:thin:@192.168.0.13:1521:xe",
+					"user30", "user30");
+				pstmt = con.prepareStatement(
+					"update buy "
+					+ "set itemname=?, customerid=?, count=? "
+					+ "where buycode=?");
+				//sql에 물음표가 있으면 실제 데이터로 바인딩
+				pstmt.setString(1, buy.getItemname());
+				pstmt.setString(2, buy.getCustomerid());
+				pstmt.setInt(3, buy.getCount());
+				pstmt.setInt(4, buy.getBuycode());
+				//sql 실행
+				result = pstmt.executeUpdate();
+				
+				//정리
+				pstmt.close();
+				con.close();
+				
+				
+			}catch(Exception e) {
+				System.out.printf(
+						"데이터 삽입 예외:%s\n", 
+						e.getMessage());
+					e.printStackTrace();
+				}
+			
+			return result;
+		}
+		
 	
 	//전체 데이터를 조회하는 메소드
 	public List<Buy> getList() {
