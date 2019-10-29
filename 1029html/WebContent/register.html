@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<form action = "register.jsp">
+		<fieldset>
+			<legend>회원가입</legend>
+			<label for = "">아이디</label>
+			<input type = "text" id = "id" naem = "id" size = "20">
+			<!-- <input type = "button" id = "idcheck" value = "중복확인"/> -->
+			<span id = "msg"></span>
+			<br/>
+			
+			<script>
+				document.getElementById("id").addEventListener("blur",function(e){
+					if(document.getElementById("id").value == "root")
+					{
+						document.getElementById("msg").innerHTML = "사용 불가한 아이디 입니다."
+						document.getElementById("msg").style.color = 'red'
+					}
+					else
+					{
+						document.getElementById("msg").innerHTML =""	
+					}
+				});
+				
+			</script>
+			
+			<label for = "">비밀번호</label>
+			<input type = "password" id = "pw" naem = "pw" size = "20"><br/>
+			
+			<label for = "">이메일</label>
+			<input type = "text" id = "email" name = "email" size = "30"/>@
+			<select name = "corp">
+				<option value = "direct">직접입력</option>
+				<option value = "gmail">gmail.com</option>
+				<option value = "naver">naver.com</option>
+			</select>
+			<br/>
+			<label for = "gender">성별</label>
+			<input type = "radio" name = "gender" checked = "checked" value = "man"/>남자
+			<input type = "radio" name = "gender" value = "woman"/>여자
+			<br/>
+			
+			<label for = "image">이미지</label>
+			<input type = "file" name = "image" id = "image" accept = ".gif,.jpg,.png,.jpeg"/><br/>
+			
+			<label for = "story">하고 싶은 이야기</label>
+			<br/>
+			<textarea rows = "10" cols = "100" name = "story" id = "story"></textarea> <br/>
+			<br/>
+			
+			<input type = "submit" value = "회원가입" />
+			<input type = "reset" value = "작성취소"/>
+			<input type = "button" value = "메인으로" onclick = "location.href='./'"/><br/>
+			
+			<select size = "3" multiple = "multiple">
+				<option value = "1">1</option>
+				<option value = "1">2</option>
+				<option value = "1">3</option>
+				<option value = "1">4</option>
+				<option value = "1">5</option>
+				<option value = "1">6</option>
+			</select><br/>
+			
+		</fieldset>
+		
+	</form>
+</body>
+</html>

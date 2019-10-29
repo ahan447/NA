@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자</title>
+<style>
+
+
+/*태그 선택자*/
+p{
+color:red;
+}
+
+
+/*클래스(공통된 디자인을 적용하기 위해서 생성) 선택자*/
+.b{
+color:blue;
+}
+/*id(1개만 구별) 선택자*/
+#sm{
+	background-color:papayawhip;
+}
+
+#apple{
+	background-color:black;
+	color:white;
+}
+
+#apple:hover{
+color:gray;
+}
+
+#apple:active{
+color:red;
+}
+
+</style>
+
+
+
+</head>
+<body>
+	<span id="apple">사과</span>
+	<p>문단 태그</p>
+	<p>문단 태그</p>
+	<div class='b'>영역 태그 - 블록</div>
+	<span class='b'>영역 태그 - 인라인</span>
+	<h3>작은 제목</h3>
+	<h3 id='sm'>작은 제목</h3>
+
+
+</body>
+</html>

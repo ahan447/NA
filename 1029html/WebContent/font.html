@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>타이포그라피</title>
+<style>
+/*글자 모양을 바꿀 때는 하나 씩 속성을 설정해도 되고 한꺼번에 여러가지를 적용해도 됨 */
+	p:first-letter{
+		font-weight:bold;
+		font-size:3em;
+	} 
+	.content{
+		font:bold normal small-caps 18px /1.5 "돋움",Dotum,sans-serif;
+	}
+
+a{
+	text-decoration:none;
+}
+	#smalltitle{
+		font-size:100px;
+		coclr:#999;
+		/* 텍스트에 그림자 효과 설정 */
+		text-shadow : 5px 5px #ccc, 10px 10px #cc9, 15px 15px #c99;
+	}
+
+
+</style>
+</head>
+<body>
+	<h3 id="smalltitle">shadow</h3>
+
+	<a href="#"><h3>타이포그라피 적용</h3></a>
+	
+	<p>안녕하세요 문단 태그입니다.</p>
+	<p class="content">
+		타이포그라피를 적용해보기 위한 문단입니다.<br/>
+		문단 태그 안에서 강제로 줄 변경을 하려면 br태그를
+		 사용합니다.
+	</p>
+	
+</body>
+</html>
