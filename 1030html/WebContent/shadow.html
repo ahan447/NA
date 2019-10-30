@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>shadow</title>
+<style type="text/css">
+/*모든 속성에 여백을 0로 설정*/
+/*예전 IE 와의 호환성 때문에 적용*/
+*{
+	margin:0px;
+	padding:0px;
+}
+h1 a{
+font-size:40px;
+text-decoration:none;
+text-align:center;
+color:#000;
+widtg:200px;
+padding:30px; /*IE 와 다른 브라우저에서 다르게 보임*/
+border:1px solid rgb(18,52,86);
+border-radius:20px;
+background-color:#eee;
+box-shadow:
+	inset 0px 0px 20px 15px
+	rgba(18, 52, 86, 0.5)
+}
+h1 a:hover{background-color:#aff;}
+
+#disp{
+	/*왼쪽에 떠 있는 것처럼 출력*/
+	float:left;
+}
+
+</style>
+</head>
+<body>
+	<!-- <h1><a href='#'>대한민국</a></h1>  -->
+	<div id="disp">하</div>
+	<div id="print">이</div>
+</body>
+</html>

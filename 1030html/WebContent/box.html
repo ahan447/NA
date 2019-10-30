@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스모델</title>
+<style>
+p{
+	/*배경색 적용 */
+	background-color:silver;
+	/*다른 영역과의 여백 설정 - 상하좌우 동일하게 설정*/
+	/*margin은 겹치면 큰 값 1개만 적용*/
+	margin:20px;
+	/*border 와 콘텐츠와의 여백
+	왼쪽에만 적용*/
+	padding-left:50px;
+	
+}
+	 p:hover{padding-left:20px;}
+
+	span:active{
+	margin:50px;
+		padding-left:4px;
+		padding-top:5px;
+		border-left-color:green;
+		border-top-color:green;
+		border-right-color:blue;
+		border-bottom-color:blue;
+		border-width:5px;
+		border-style:solid;	}
+	span{
+	margin:50px;
+		background-color:silver;
+		/*border:5px,solid red;*/
+		border-left-color:blue;
+		border-top-color:blue;
+		border-right-color:green;
+		border-bottom-color:green;
+		border-width:5px;
+		border-style:solid;
+	}
+	li{
+	list-style:none;
+	width:100px;
+	height:50px;
+	padding-top:50px;
+	text-align:center;
+	background-color:papayawhip;
+	border-radius:200px 0 200px 0;
+	}
+
+</style>
+</head>
+<body>
+	<li>대</li>
+	<a herf="#"><span>버튼</span></a>
+	<p>박스 모델 적용 연습</p>
+	
+</body>
+</html>

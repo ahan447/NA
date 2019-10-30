@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>트랜지션 애니메이션</title>
+<style>
+/* IE 와의 호환성을 위해서 설정*/
+*{
+	margin:0px;
+	padding:0px;
+}
+
+li{
+/*글머리 기호를 없앰*/
+list_style-type:none;}
+h2,ul{
+/*경계선과 콘텐츠 사이의 여백 설정*/
+
+padding 10 px
+}
+li a{
+/* li안에 있는 */
+text-decoration:none; /*밑줄제거*/
+color:#123456;
+background-color:#abc; /*aabbcc 가 적용*/
+display:block; /* 블럭 요소 만들기*/
+width:300px;
+height:20px;
+padding:10px;
+/*애니메이션 설정*/
+/*너비가 변할 때는 2초동안 변화*/
+/*-webkit-transition:width 2.0s;
+-webkit-transition:color 2.0s;*/
+-webkit-transition:all 2.0s;
+}
+
+li a:hover{width:450px; color:#c00;
+			background-color:green;}
+@-webkit-keyframes keyany{
+	from{
+		left:500px;
+		-webkit-transform:rotate(0deg);
+	}
+	
+	
+	
+	to{
+		left:500px;
+		-webkit-transform:rotate(1800deg);
+	}
+}
+img{
+	position:absolute;
+	-webkit-animation-name:keyany;
+	-webkit-animation-duration:1s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+
+}
+</style>
+</head>
+<body>
+	<img src="./images/abc.png" width="50">
+	<h2>객체지향의 3대 특징</h2>
+	<ul>
+		<li><a href="#">Encapsulation(캡슐화)</a>
+		<li><a href="#">Inheritance(상속성)</a>
+		<li><a href="#">Polumorphism(다형성)</a>
+	
+	</ul>
+</body>
+</html>

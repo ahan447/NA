@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3D</title>
+<style>
+	@-webkit-keyframes spinner{
+		from{-webkit-transform:rotateX(0deg);}
+		to{-webkit-transform:rotateX(360deg);}}
+
+	#spinner{
+	height:100px;
+	-webkit-animation-name:spinner;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-duration:6s;
+	-webkit-transform-style:preserve-3d;
+	}
+	#stage{
+		-webkit-perspective:1200px;
+	}
+</style>
+</head>
+<body>
+	<div id="stage" style="background-color:rgba(0,0,0,0.5)">
+		<p id="spinner" style="hackground-color:rgba(0,0,0,0.5);
+		text-align:center; color:#fff">
+		3D 애니메이션
+		</p>
+	</div>
+	<script>
+	var flag = false;
+	setInterval(function(){
+		if(flag == false){
+			document.getElementById("spinner").innerHTML = "1";
+			flag = true;
+		}else{
+			document.getElementById("spinner").innerHTML = "2";
+			flag = false;
+		}
+	},5000);
+	
+	
+	</script>
+		
+		
+</body>
+</html>
