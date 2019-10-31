@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+<script>
+//문자는 첫글자 부터 하나씩 크기비료를 해서 결과를 리턴
+
+document.writeln("Java > C = " + ('Java' > 'C') +"<br/>");
+document.writeln("Java > c = " + ('Java' > 'c') +"<br/>");
+document.writeln("<br/>");
+//==는 자료형에 상관없이 데이터의 값이 같으면 true
+document.writeln("10 == \'10' = " + (10 == '10') +"<br/>");
+//===는 값과 자료형도 같아야 함
+document.writeln("10 === \'10' = " + (10 === '10') +"<br/>");
+
+//year가 가진 값이 3의 배수도 아니고 4의 배수도 아니면
+//합격 그렇지 않으면 불합격이라고 브라우저에 출력
+var year = 103;
+var result = year % 3 != 0 && year % 4 != 0 ?
+		"합격" : "불합격" ;//삼항 연산자 이용
+document.writeln(
+				"result = " + result + "<br/>");
+
+		var v = "친구로지내자면서";
+		var b = 12;
+//v의 자료형을 확인
+document.writeln("v의 자료형 : " + (typeof v) + "<br/>");
+document.writeln("b의 자료형 : " + (typeof b) + "<br/>");
+
+
+
+
+</script>
+</html>
