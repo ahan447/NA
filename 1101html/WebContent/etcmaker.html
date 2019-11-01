@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+<script>
+	var addr =
+		"https://localhost:8080/nicknamecheck.jsp?nick=군계";
+	//: 도 변환
+	document.writeln(escape(addr) + "<br/>");
+	
+	//한글만 변환 - 이 방법으로 전송
+	document.writeln(encodeURI(addr) + "<br/>");
+	
+	// : , / 두개 다 변환
+	document.writeln(encodeURIComponent(addr) + "<br/>");
+	
+	
+</script>
+</html>

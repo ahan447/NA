@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>대화상자</title>
+</head>
+<body>
+
+</body>
+<script>
+	alert("모달(modal) 대화상자 - 알림 메시지 출력을 위해서 많이 사용");
+	document.writeln("대화상자가 제어권을 잃어버려야만 수행" + "<br/>");
+	var result = confirm("정말로 삭제?");
+	if(result){
+		document.writeln("삭제를 수행" + "<br/>");
+	}else{
+		document.writeln("삭제를 취소" + "<br/>");
+	}
+	//한 줄 입력받기
+	result = prompt("이름 입력");
+	//자바스크립트에서는 0이 아닌 숫자, null 이 아닌 데이터도 true
+	
+	if(result){
+		document.writeln(result + "<br/>");
+	}else{
+		document.writeln("이름 입력 취소" + "<br/>");
+	}
+</script>
+</html>

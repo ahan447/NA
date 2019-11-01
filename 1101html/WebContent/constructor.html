@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자를 이용한 객체 생성</title>
+</head>
+<body>
+
+</body>
+<script>
+//생성자는 클래스 이름과 일치해야 하기 때문에 대부분 대문자로 시작
+	function Person(name, email, mobile){
+		this.name = name;
+		this.email = email;
+		//this. 을 붙이지 않으면 지역변수가 됨
+		phone = mobile;
+	}
+	var p1 = new Person(
+		"무제" , "null@zzz.zzz" , "01000000000");
+	for(attr in p1){
+		document.writeln(attr + " : " + p1[attr] + "<br/>");
+				
+	}
+</script>
+</html>
