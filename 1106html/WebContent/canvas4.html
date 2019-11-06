@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="canvas" width='400' height='400'>
+	</canvas>
+
+</body>
+<script>
+	var cabvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d');
+	//겹쳐지는 영역에 대한 설정
+	context.globalCompositeOperation =
+		'destination-atop';
+	
+	context.fillStyle = 'red';
+	context.fillRect(0,0,100,100);
+	
+	context.fillStyle = 'rgba(128,255,255,1.0)';
+	context.fillRect(50,50,100,100);
+	
+	context.globalCompositeOperation =
+	// 'source-over';
+		'destination-atop';
+	context.fillStyle = '#AEA6E5';
+	context.fillRect(100,250,300,100);
+	
+	context.fillStyle = '#5EC56D';
+	context.font= 'bold 80px verdane, sans-serif'
+	context.fillText("TEST", 120, 280);
+	
+	
+</script>	
+
+</html>
