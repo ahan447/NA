@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 드래그 앤 드랍</title>
+<style>
+	#dropbox{
+	float:left;
+	width:600px;
+	height:300px;
+	margin:10px;
+	border:1px solid #6f88c7;
+	}
+	#picturebox{
+	float:left;
+	width:200px;
+	margin:10px;
+	border:1px solid #182f6b;
+	
+	}
+	#pictue{
+	float:left;
+	padding:5px;
+	}
+	
+</style>
+<script>
+	window.addEventListener('load',function(e){
+		
+	});
+
+</script>
+</head>
+<body>
+<section id="dropbox">
+			이미지 여기에 놓기
+</section>
+
+<section id="picturebox">
+		<img id="picture" width="200" height="200"
+src = './resources/A++.png'/>
+</section>
+
+
+
+
+</body>
+
+<script>
+	//드랍 할 이미지
+	var picture =
+		document.getElementById('picture');
+	//이미지를 드래그 할 때 이미지를 다른 곳에 추가할 수
+	//있는 코드를 데이터로 가지고 감
+	picture.addEventListener('dragstart' ,function(e){
+		var event = e || window.event;
+	var code = '<img width="600" height="600" src="' +
+		picture.getAttribute('src') + '"/>';
+		event.dataTransfer.setData('Text' , code);
+	
+	});
+	
+	
+	//드랍할 영역
+	var drop =
+		document.getElementById('dropbox');
+	//drop 이벤트가 발생했을 때
+	drop.addEventListener('drop' , function(e){
+		var event = e || window.event;
+		//기본 이벤트 제거
+		event.preventDefault();
+		//전송할 데이터를 출력
+		drop.innerHTML +=
+			event.dataTransfer.getData("Text");
+	});
+	//드래그 앤 드랍을 사용할 때는 받는 쪽의 dragenter 와
+	//dragover를 실행되지 않도록 해주어야 
+	drop.addEventListener('dragenter' , function(e){
+		var event = e || window.event;
+		
+		event.preventDefault();
+		
+	});
+	drop.addEventListener('dragover' , function(e){
+		var event = e || window.event;
+		event.preventDefault();
+		
+		
+	});
+	
+	
+		
+</script>
+</html>
