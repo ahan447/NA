@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>무한 스크롤</title>
+<style>
+	img{
+		width:600px;
+		height:600px;
+	}
+
+</style>
+<script src='./js/jquery.js'></script>
+<script>
+	
+
+
+
+	$(function(){
+		for(idx=0; idx<30; idx=idx+1){
+			$('<div><img src="./images/1.jpg" />').appendTo('body');
+		}
+		
+		$(window).scroll(function(){
+			//스크롤의 위치 찾기
+			var scrollHeight = $(window).scrollTop() + $(window).height();
+			//문서의 높이 찾기
+			var documentHeight = $(document).height();
+			//현재 스크롤의 위서와 문서의 높이가 같다면
+			//서버를 연동하는 경우에는 서버에서 ajax로 데이터를 가져와서
+			//출력하는 코드르 삽입해야 함
+			if(scrollHeight == documentHeight){
+				for(idx=0; idx<10; idx=idx+1){
+					$('<div><img src="./images/1.jpg" />').appendTo('body');
+				}
+				
+			}
+		});
+	});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

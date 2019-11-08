@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src='./js/jquery.js'></script>
+<script>
+	$(function(){
+		$('#img').fadeOut(5000,
+				function(){
+			console.log('애니메이션 종료 후 실행1');
+		});
+		console.log('애니메이션 종료 후 실행2');
+		$('#img2').toggle(5000);
+	});
+
+</script>
+
+</head>
+<body>
+	<img id='img' src='./images/1.jpg' width='300' height='300'/>
+	<img id='img2' src='./images/2.jpg' width='300' height='300'/>
+	
+</body>
+</html>
